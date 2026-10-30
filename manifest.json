@@ -1,0 +1,10 @@
+{
+  "name": "Berks Games PS4 Host",
+  "short_name": "Berks Games",
+  "start_url": "./INDEX.HTML",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "description": "Berks Games PS4 Host menyusu"
+}

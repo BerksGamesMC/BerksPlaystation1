@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="az">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <title>Berks Games | PS4 Host</title>
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0;min-height:100vh;display:grid;place-items:center;
+      font-family:Arial,Helvetica,sans-serif;color:#eef6ff;
+      background:radial-gradient(ellipse at 50% 15%,#123c68 0,#081a2d 42%,#03070d 100%);
+      padding:24px
+    }
+    .panel{
+      width:min(100%,440px);padding:34px 25px;text-align:center;
+      border:1px solid #24649a;border-radius:22px;
+      background:linear-gradient(160deg,rgba(13,38,64,.96),rgba(4,12,22,.97));
+      box-shadow:0 18px 65px #0009,0 0 28px #168bff20
+    }
+    .logo{font-size:13px;letter-spacing:5px;color:#70c7ff;font-weight:700}
+    h1{font-size:30px;margin:13px 0 8px}
+    .sub{color:#a8bfd4;font-size:14px;line-height:1.6;margin:0 0 28px}
+    .btn{
+      display:flex;align-items:center;justify-content:center;gap:11px;
+      width:100%;min-height:58px;border:1px solid #64c4ff;border-radius:13px;
+      color:white;text-decoration:none;font-size:17px;font-weight:700;
+      background:linear-gradient(100deg,#0878d1,#174caa);
+      box-shadow:0 8px 25px #0878d155;transition:.2s
+    }
+    .btn:hover{filter:brightness(1.15);transform:translateY(-2px)}
+    .btn:active{transform:scale(.98)}
+    .dot{width:9px;height:9px;border-radius:50%;background:#a9e7ff;box-shadow:0 0 12px #a9e7ff}
+    .note{font-size:12px;color:#7895ae;margin:22px 0 0}
+    #loading{display:none;margin-top:22px;color:#bfe6ff;font-size:13px}
+    .spinner{
+      width:25px;height:25px;margin:0 auto 10px;border:3px solid #315b7b;
+      border-top-color:#62c5ff;border-radius:50%;animation:spin .8s linear infinite
+    }
+    @keyframes spin{to{transform:rotate(360deg)}}
+  </style>
+</head>
+<body>
+  <main class="panel">
+    <div class="logo">BERKS GAMES</div>
+    <h1>GoldHEN Menyusu</h1>
+    <p class="sub">PS4 Host menyusuna keçmək üçün aşağıdakı düyməyə bas.</p>
+
+    <a class="btn" id="openMenu" href="g2all/index.html">
+      <span class="dot"></span>
+      GoldHEN Menyusu
+    </a>
+
+    <div id="loading" aria-live="polite">
+      <div class="spinner"></div>
+      Menyu açılır...
+    </div>
+    <p class="note">Berks Games</p>
+  </main>
+
+  <script>
+    const link = document.getElementById('openMenu');
+    const loading = document.getElementById('loading');
+    link.addEventListener('click', function () {
+      loading.style.display = 'block';
+      link.style.pointerEvents = 'none';
+      link.style.opacity = '.65';
+      // Link g2all/index.html ünvanına normal şəkildə keçid edir.
+    });
+  </script>
+</body>
+</html>
